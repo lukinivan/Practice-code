@@ -1,0 +1,568 @@
+/* #region Base styles */
+body {
+  font-family: "Montserrat", sans-serif;
+  color: #111;
+  background-color: #fafafa;
+}
+
+a {
+  text-decoration: none;
+  color: currentColor;
+}
+
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+h1,
+h2,
+h3,
+p {
+  margin: 0;
+}
+
+button {
+  font-family: inherit;
+  color: currentColor;
+  cursor: pointer;
+}
+
+address {
+  font-style: normal;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+/* #endregion */
+
+/* #region comon*/
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.container {
+  width: 1168px;
+  padding: 0 16px;
+  margin: 0 auto;
+}
+
+.ingredients,
+.made,
+.products,
+.best,
+.reviews {
+  padding: 60px 0;
+}
+
+.ingredients-title,
+.made-title,
+.products-title,
+.best-title,
+.reviews-title {
+  width: 412px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 1.16667;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+.socials {
+  display: flex;
+  gap: 14px;
+}
+
+.socials-item {
+  width: 40px;
+  height: 40px;
+}
+
+.socials-link {
+  display: flex;
+  text-align: center;
+  justify-items: center;
+
+  border: 1px solid rgba(17, 17, 17, 0.1);
+  border-radius: 10px;
+}
+
+.socials-link:hover,
+.socials-link:focus {
+  border-color: #fd9222;
+}
+
+.btn {
+  min-width: 144px;
+  min-height: 44px;
+  padding: 14px 40px;
+  font-size: 14px;
+  font-weight: 400px;
+  border: 1px solid transparent;
+  border-radius: 100px;
+}
+
+.orange-text {
+  color: #fd9222;
+}
+
+.orange-back {
+  background-color: #fd9222;
+}
+/* #endregion */
+
+/* #region Header */
+.header .container {
+  display: flex;
+  align-items: center;
+  gap: 90px;
+  padding: 24px 16px;
+}
+
+.header .header-logo {
+}
+
+.header-nav {
+  display: flex;
+  justify-content: space-between;
+  flex-grow: 1;
+}
+
+.header-nav-list {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.header-nav-list {
+  gap: 24px;
+  justify-content: space-between;
+  align-content: center;
+}
+
+.header-nav-link:hover {
+  color: #fd9222;
+}
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.11;
+  letter-spacing: -0.03em;
+}
+
+.logo-simply {
+  font-style: italic;
+}
+
+.logo-img {
+  margin-left: 4px;
+}
+
+.socials-list {
+}
+
+/* #endregion Header*/
+
+/* #region Hero*/
+.hero {
+  margin-bottom: 80px;
+}
+
+.hero .container {
+  padding: 40px;
+  padding-top: 381px;
+  background: rgba(17, 17, 17, 0.4);
+  border-radius: 30px;
+}
+
+.hero .hero-title {
+  width: 484px;
+  margin-bottom: 32px;
+  font-weight: 500;
+  font-size: 28px;
+  line-height: 1.21;
+  letter-spacing: -0.03em;
+  color: #fff;
+}
+
+.hero-wrapper {
+  display: flex;
+  justify-content: space-between;
+}
+
+.hero-list {
+  display: flex;
+  gap: 14px;
+}
+
+.hero-link {
+  display: inline-flex;
+  align-content: center;
+  gap: 14px;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.28;
+  letter-spacing: -0.03em;
+  color: #fff;
+}
+
+.hero-link:hover,
+.hero-link:focus {
+  color: #fd9222;
+}
+
+.btn.orange {
+  background: #fd9222;
+  color: #fff;
+}
+
+.btn.light {
+  background-color: transparent;
+  border-color: white;
+  color: #fff;
+}
+
+.btn.orange:hover,
+.btn.orange:focus {
+  background-color: #fcf1e0;
+  color: #fd9222;
+}
+
+.btn.light:hover,
+.btn.light:focus {
+  color: #fd9222;
+  border-color: #fd9222;
+}
+
+/* #endregion */
+
+/* #region Benefits*/
+.benefits {
+  padding: 50px 0;
+  background: #1e1823;
+}
+
+.benefits-list {
+  display: flex;
+  justify-content: center;
+  gap: 88px;
+}
+
+.benefits-item {
+  width: 308px;
+}
+
+.benefits-title {
+  margin-bottom: 18px;
+  font-weight: 600;
+  font-size: 18px;
+  color: #fff;
+}
+
+.benefits-text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.28;
+  letter-spacing: -0.02em;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+/* #endregion */
+
+/* #region Ingredients*/
+.ingredients {
+  padding-top: 120px;
+}
+.ingredients .container {
+}
+
+.ingredients-title {
+}
+
+.ingredients-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 32px;
+}
+.ingredients-item {
+  width: calc((100% - 32px * 3) / 4);
+  padding: 28px 23px;
+  border: 1px solid transparent;
+  border-radius: 15px;
+  background: #fff;
+}
+
+.ingredients-name {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.28571;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  margin-top: 36px;
+}
+
+.ingredients-item:nth-child(2n) {
+  border-color: #fd9222;
+}
+
+.ingredients-item:nth-child(4n + 1) {
+  background-color: #fd9222;
+  color: #fff;
+}
+.ingredients-item:nth-child(4n + 3) {
+  background-color: #1e1823;
+  color: #fff;
+}
+
+.ingredients-img {
+}
+.ingredients-name {
+}
+
+/* #endregion */
+
+/* #region Made*/
+.made {
+}
+.made .container {
+}
+.made-title {
+}
+
+.made-wrapper {
+  display: flex;
+  gap: 20px;
+}
+
+.made-img-box {
+  border: 1px solid transparent;
+  border-radius: 15px;
+}
+
+.made-receipt-box {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid transparent;
+  background-color: #fff;
+  border-radius: 15px;
+  max-width: 515px;
+  max-height: 400px;
+  padding: 32px;
+}
+.made-img {
+}
+
+.made-subtitle {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.33;
+  margin-bottom: 28px;
+}
+
+.made-list {
+}
+
+.made-item {
+  margin-bottom: 24px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.28;
+  letter-spacing: -0.02em;
+}
+
+.made-item:last-child {
+  margin-bottom: 0;
+}
+
+/* #endregion */
+
+/* #region Products*/
+.products {
+}
+.products-title {
+}
+
+.products-list {
+  display: flex;
+  flex-wrap: wrap;
+  row-gap: 24px;
+  column-gap: 18px;
+}
+
+.products-item {
+  width: calc((100% - 18px * 3) / 4);
+  padding: 32px 20px;
+  text-align: center;
+  border-radius: 15px;
+  border: 1px solid rgba(17, 17, 17, 0.1);
+  background-color: #fff;
+}
+
+.products .item-title {
+  margin-top: 8px;
+  margin-bottom: 2px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.33;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+}
+
+.products .item-name {
+  margin-bottom: 18px;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 1.16;
+  letter-spacing: -0.02em;
+  color: rgba(17, 17, 17, 0.7);
+}
+
+.btn.products {
+  border: 1px solid rgba(17, 17, 17, 0.1);
+  border-radius: 100px;
+  padding: 8px 20px;
+  min-width: 90px;
+  min-height: 30px;
+  font-weight: 600;
+  font-size: 14px;
+}
+/* #endregion */
+
+/* #region Best*/
+.best .container {
+}
+
+.best-list {
+  display: flex;
+  justify-content: space-between;
+}
+
+.best-item {
+}
+
+.best-title {
+}
+.orange-text {
+}
+
+.best-img {
+  border-radius: 15px 15px 0px 0px;
+}
+.best-name {
+  padding: 28px;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.33;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+  text-align: center;
+
+  border-radius: 0px 0px 15px 15px;
+  border: 1px solid rgba(17, 17, 17, 0.1);
+  border-top: none;
+  background: #fff;
+}
+/* #endregion */
+
+/* #region Reviews*/
+
+.reviews-list {
+  display: flex;
+  gap: 28px;
+  margin-bottom: 50px;
+}
+
+.reviews-item {
+  text-align: center;
+  border: 1px solid rgba(17, 17, 17, 0.1);
+  border-radius: 15px;
+  background-color: #fff;
+  padding: 0 24px 24px 24px;
+  max-width: 360px;
+  max-height: 242px;
+}
+
+.reviews-title {
+}
+
+.reviews-img {
+
+}
+
+.text-box {
+}
+
+.reviews-name {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.33;
+  text-align: center;
+  margin: 18px 0 24px 0;
+}
+
+.reviews-text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.28;
+  letter-spacing: -0.02em;
+  text-align: center;
+  color: rgba(17, 17, 17, 0.7);
+}
+
+.btn.review {
+  font-weight: 600;
+  font-size: 18px;
+  color: #111;
+  border: 1px solid #fd9222;
+  background-color: transparent;
+}
+/* #endregion */
+
+/* #region Header*/
+.footer {
+  padding: 50px 0;
+  background: #1e1823;
+}
+.footer .container {
+}
+.footer-title {
+}
+.footer-sicials-title {
+}
+.socials-item {
+}
+.socials-link {
+}
+.socials-img {
+}
+.footer-contacts-title {
+}
+.footer-address {
+}
+.item {
+}
+.contacts-link {
+}
+.footer-nav {
+}
+/* #endregion */
