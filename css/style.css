@@ -193,6 +193,13 @@ img {
   padding-top: 381px;
   background: rgba(17, 17, 17, 0.4);
   border-radius: 30px;
+  background-image: linear-gradient(
+      rgba(17, 17, 17, 0.4),
+      rgba(17, 17, 17, 0.4)
+    ),
+    url(../images/hero/hero-bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .hero .hero-title {
@@ -458,6 +465,10 @@ img {
 }
 
 .best-item {
+  background: #fff;
+  border-radius: 15px 15px 15px 15px;
+
+  transition: transform 400ms ease-in-out;
 }
 
 .best-title {
@@ -465,9 +476,58 @@ img {
 .orange-text {
 }
 
+.best-img-cont {
+  position: relative;
+  overflow: hidden;
+  border-radius: 15px 15px 0px 0px;
+}
+
 .best-img {
   border-radius: 15px 15px 0px 0px;
 }
+
+.overlay {
+  display: flex;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  top: 0;
+  padding: 40px;
+  
+  transform: translateY(-100%);
+  transition: transform 400ms ease-in-out;
+
+  width: 100%;
+  height: 100%;
+  backdrop-filter: blur(15px);
+  background: linear-gradient(
+    161deg,
+    rgba(253, 253, 255, 0.1) 0%,
+    rgba(8, 2, 21, 0.1) 100%
+  );
+
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.28571;
+  letter-spacing: -0.02em;
+  color: #fafafa;
+}
+
+.best-item:hover {
+  transform: scale(1.01);
+}
+.best-item:hover .overlay {
+  transform: translateY(0%);
+  
+}
+
+.best-context {
+  padding: 28px 0;
+  border: 1px solid rgba(17, 17, 17, 0.1);
+  border-radius: 0px 0px 15px 15px;
+  border-top: none;
+}
+
 .best-name {
   padding: 28px;
   font-weight: 600;
@@ -476,11 +536,6 @@ img {
   letter-spacing: -0.02em;
   text-transform: uppercase;
   text-align: center;
-
-  border-radius: 0px 0px 15px 15px;
-  border: 1px solid rgba(17, 17, 17, 0.1);
-  border-top: none;
-  background: #fff;
 }
 /* #endregion */
 
@@ -506,7 +561,6 @@ img {
 }
 
 .reviews-img {
-
 }
 
 .text-box {
@@ -542,27 +596,48 @@ img {
 .footer {
   padding: 50px 0;
   background: #1e1823;
+  color: #fff;
 }
-.footer .container {
+.footer .contacts-cont {
+  display: flex;
+
+
 }
 .footer-title {
+  max-width: 300px;
+  max-height: 68px;
 }
+
 .footer-sicials-title {
+  
 }
+
 .socials-item {
 }
-.socials-link {
+
+.socials-link.foot {
+  fill: #fff;
 }
+
 .socials-img {
 }
+
 .footer-contacts-title {
 }
+
 .footer-address {
 }
+
 .item {
 }
+
 .contacts-link {
 }
+
+.foot-nav-box {
+
+}
+
 .footer-nav {
 }
 /* #endregion */
