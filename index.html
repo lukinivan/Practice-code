@@ -3,7 +3,8 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Practice</title>
+    <title>Simply Chocolate</title>
+    <link rel="icon" type="image/png" href="./images/title/chocolate.svg"/>
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/2.0.0/modern-normalize.min.css"
@@ -27,13 +28,9 @@
         <nav class="header-nav">
           <a class="logo header-logo" href="./index.html"
             ><span class="logo-simply">SIMPLY</span>&nbsp;CHOCOLATE
-            <img
-              class="logo-img"
-              src="./images/comon/chocolate.jpg"
-              width="24"
-              height="24"
-              alt="chocolate icon"
-            />
+            <svg class="socials-link-icon" width="24" height="24">
+              <use href="./images/icons/icons.svg#chocolate-logo"></use>
+            </svg>
           </a>
           <ul class="header-nav-list">
             <li class="header-nav-item">
@@ -50,13 +47,9 @@
         <ul class="socials header-sosials">
           <li class="socials-item">
             <a class="socials-link" href="https://facebook.com" target="_blank">
-              <img
-                class="socials-img"
-                src="./images/comon/icon-facebook.svg"
-                width="40"
-                height="40"
-                alt="facebook icon"
-              />
+              <svg class="socials-link-icon" width="40" height="40">
+                <use href="./images/icons/icons.svg#facebook"></use>
+              </svg>
             </a>
           </li>
           <li class="socials-item">
@@ -65,24 +58,16 @@
               href="https://instagram.com"
               target="_blank"
             >
-              <img
-                class="socials-img"
-                src="./images/comon/icon-instagram.svg"
-                width="40"
-                height="40"
-                alt="instagram icon"
-              />
+              <svg class="socials-link-icon" width="40" height="40">
+                <use href="./images/icons/icons.svg#instagram"></use>
+              </svg>
             </a>
           </li>
           <li class="socials-item">
             <a class="socials-link" href="https://twitter.com" target="_blank">
-              <img
-                class="socials-img"
-                src="./images/comon/icon-twitter.svg"
-                width="40"
-                height="40"
-                alt="Twitter icon"
-              />
+              <svg class="socials-link-icon" width="40" height="40">
+                <use href="./images/icons/icons.svg#twitter"></use>
+              </svg>
             </a>
           </li>
         </ul>
@@ -539,7 +524,10 @@
     <footer class="footer">
       <!-- #region Header -->
       <div class="contacts-cont">
-        <h2 class="footer-title"><span class="orange-text">Chocolate</span> a delicious cure for a bad day</h2>
+        <h2 class="footer-title">
+          <span class="orange-text">Chocolate</span> a delicious cure for a bad
+          day
+        </h2>
         <div class="socials-box">
           <h3 class="footer-sicials-title">Social networks</h3>
           <ul>
@@ -593,24 +581,100 @@
             </ul>
           </address>
         </div>
-        </div>
+      </div>
 
-        <div class="foot-nav-box">
-          <nav class="footer-nav">
-            <ul>
-              <li class="item">
-                <a class="" href="#home">Home</a>
-              </li>
-              <li class="item">
-                <a class="" href="#made">How it’s made?</a>
-              </li>
-              <li class="item">
-                <a class="" href="#review">Chocolate is loved</a>
-              </li>
-            </ul>
-          </nav>
-        </div>
+      <div class="foot-nav-box">
+        <nav class="footer-nav">
+          <ul>
+            <li class="item">
+              <a class="" href="#home">Home</a>
+            </li>
+            <li class="item">
+              <a class="" href="#made">How it’s made?</a>
+            </li>
+            <li class="item">
+              <a class="" href="#review">Chocolate is loved</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
       <!-- #endregion -->
+
+      <div class="backdrop is-open">
+        <div class="modal">
+          <button class="modal-btn" type="button">
+            <svg class="modal-btn-icon" width="28" height="28">
+              <use href="./images/icons/icons.svg#x-close"></use>
+            </svg>
+          </button>
+          <p class="modal-caption">
+            LEAVE A REVIEW ABOUT <span class="orange-text">OUR CHOCOLATE</span>
+          </p>
+          <form class="modal-form" name="rewiew-form">
+            <div class="modal-wrapper">
+              <label class="modal-field-label" for="name-id">Name</label>
+              <div class="modal-field">
+                <input class="modal-field-input" id="name-id" type="text" />
+                <svg class="modal-field-icon" width="24" height="24">
+                  <use href="./images/icons/icons.svg#user"></use>
+                </svg>
+              </div>
+            </div>
+            <div class="modal-wrapper">
+              <label class="modal-field-label" for="email-id">Email</label>
+              <div class="modal-field">
+                <input class="modal-field-input" id="email-id" type="text" />
+                <svg class="modal-field-icon" width="24" height="24">
+                  <use href="./images/icons/icons.svg#mail"></use>
+                </svg>
+              </div>
+            </div>
+
+            <div class="modal-wrapper">
+              <label class="modal-field-label" for="phone-id"
+                >Phone number</label
+              >
+              <div class="modal-field">
+                <input class="modal-field-input" id="phone-id" type="text" />
+                <svg class="modal-field-icon" width="24" height="24">
+                  <use href="./images/icons/icons.svg#phone"></use>
+                </svg>
+              </div>
+            </div>
+
+            <div class="modal-wrapper">
+              <label class="modal-field-label" for="txarea-id">Comment</label>
+              <div class="modal-field">
+                <textarea
+                  class="modal-txarea"
+                  name="comment"
+                  id="txarea-id"
+                  rows="4"
+                  placeholder="Enter text"
+                ></textarea>
+              </div>
+            </div>
+
+            <div class="modal-wrapper ">
+              <input
+                class="visually-hidden hidden-chbx"
+                id="previcy-policy"
+                type="checkbox"
+              />
+              <label class="modal-chbx-lable" for="previcy-policy">
+                <span class="checkbox-icon"
+                  ><svg class="" width="10" height="10">
+                    <use href="./images/icons/icons.svg#checkbox"></use>
+                  </svg></span
+                >I accept the terms and conditions of the&nbsp;
+                <a class="orange-text" href="">Privacy Policy</a></label
+              >
+            </div>
+
+            <button class="btn submit-btn" type="submit">Send</button>
+          </form>
+        </div>
+      </div>
     </footer>
   </body>
 </html>
