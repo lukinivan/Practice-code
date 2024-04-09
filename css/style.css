@@ -5,6 +5,10 @@ body {
   background-color: #fafafa;
 }
 
+.hide {
+  display: none;
+}
+
 a {
   text-decoration: none;
   color: currentColor;
@@ -56,9 +60,24 @@ img {
 }
 
 .container {
-  width: 1168px;
-  padding: 0 16px;
+  min-width: 320px;
+  max-width: 375px;
   margin: 0 auto;
+  padding: 0 20px;
+}
+
+@media only screen and (min-width: 768px) {
+  .container {
+    min-width: 768px;
+    padding: 0 32px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .container {
+    min-width: 1200px;
+    padding: 0 32px;
+  }
 }
 
 .ingredients,
@@ -69,12 +88,10 @@ img {
   padding: 60px 0;
 }
 
-.ingredients-title,
 .made-title,
 .products-title,
 .best-title,
 .reviews-title {
-  width: 412px;
   margin: 0 auto;
   margin-bottom: 50px;
   font-weight: 600;
@@ -242,6 +259,16 @@ img {
   color: #fd9222;
 }
 
+.her-icon {
+  background-color: #fafafa;
+  border-radius: 50%;
+}
+
+.hero-link-icon {
+
+  fill: #fd9222;
+}
+
 .btn.orange {
   background: #fd9222;
   color: #fff;
@@ -302,26 +329,81 @@ img {
 
 /* #region Ingredients*/
 .ingredients {
-  padding-top: 120px;
+  padding-top: 80px;
 }
+
+@media only screen and (min-width: 768px) {
+  .ingredients {
+    padding-top: 100px;
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .ingredients {
+    padding-top: 120px;
+  }
+}
+
 .ingredients .container {
 }
 
 .ingredients-title {
+  width: 283px;
+  margin: 0 auto;
+  margin-bottom: 32px;
+
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 1.2;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  text-align: center;
+}
+
+@media only screen and (min-width: 768px) {
+  .ingredients-title {
+    width: 412px;
+    font-size: 24px;
+    line-height: 1.17;
+    margin-bottom: 50px;
+  }
 }
 
 .ingredients-list {
   display: flex;
-  flex-wrap: wrap;
-  gap: 32px;
+  flex-direction: column;
+  gap: 20px;
 }
+
+@media only screen and (min-width: 768px) {
+  .ingredients-list {
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: 32px;
+  }
+}
+
 .ingredients-item {
-  width: calc((100% - 32px * 3) / 4);
+  width: 100%;
+
   padding: 28px 23px;
   border: 1px solid transparent;
   border-radius: 15px;
   background: #fff;
 }
+
+@media only screen and (min-width: 768px) {
+  .ingredients-item {
+    width: calc((100% - 32px) / 2);
+  }
+}
+
+@media only screen and (min-width: 1200px) {
+  .ingredients-item {
+    width: calc((100% - 32px * 3) / 4);
+  }
+}
+
 
 .ingredients-name {
   font-weight: 600;
@@ -331,6 +413,8 @@ img {
   text-transform: uppercase;
   margin-top: 36px;
 }
+
+
 
 .ingredients-item:nth-child(2n) {
   border-color: #fd9222;
@@ -346,6 +430,7 @@ img {
 }
 
 .ingredients-img {
+  margin: 0 auto;
 }
 .ingredients-name {
 }
@@ -601,15 +686,25 @@ img {
   background: #1e1823;
   color: #fff;
 }
-.footer .contacts-cont {
+.foot-top {
   display: flex;
+  padding-bottom: 50px;
 }
 .footer-title {
   max-width: 300px;
   max-height: 68px;
 }
 
+.socials-box {
+  margin-left: auto;
+}
+
 .footer-sicials-title {
+}
+
+.footer-sicials-list {
+  display: flex;
+  gap: 14px;
 }
 
 .socials-item {
@@ -622,10 +717,11 @@ img {
 .socials-img {
 }
 
-.footer-contacts-title {
+.foot-address {
+  margin-left: 50px;
 }
 
-.footer-address {
+.footer-contacts-title {
 }
 
 .item {
@@ -641,16 +737,22 @@ img {
 }
 /* #endregion */
 
-/* #region */
+/* #region Modal Window*/
 .backdrop {
   position: fixed;
+
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
+
   opacity: 0;
   visibility: hidden;
   pointer-events: auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
   background-color: rgba(46, 47, 66, 0.4);
 }
@@ -663,14 +765,31 @@ img {
 
 .modal {
   position: absolute;
+
   top: 50%;
   left: 50%;
   transform: translateX(-50%) translateY(-50%);
+
   width: 517px;
   height: 90%;
   padding: 40px;
+
   border-radius: 15px;
+
   background: #fafafa;
+}
+
+.modal-btn {
+  position: absolute;
+
+  top: 24px;
+  right: 24px;
+
+  padding: 0;
+  border: none;
+
+  background-color: transparent;
+  color: #111;
 }
 
 .modal-btn-icon {
@@ -730,15 +849,6 @@ img {
   stroke: #fd9222;
 }
 
-.modal-btn {
-  position: absolute;
-  top: 24px;
-  right: 24px;
-  padding: 0;
-  color: #111;
-  background-color: transparent;
-  border: none;
-}
 .modal-btn-icon {
 }
 
@@ -754,6 +864,10 @@ img {
 
 .modal-txarea:focus {
   border-color: #fd9222;
+}
+
+.hidden-chbx {
+  cursor: pointer;
 }
 
 .modal-chbx-lable {
@@ -773,7 +887,6 @@ img {
   height: 20px;
   border-radius: 6px;
   border: 1px solid rgba(17, 17, 17, 0.14);
-
 }
 
 .hidden-chbx:checked + .modal-chbx-lable .checkbox-icon {
